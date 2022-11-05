@@ -1,0 +1,164 @@
+/* !!!!!!!!!!!!!!!!!!!! + [ CSS RESET ] + !!!!!!!!!!!!!!!!!!!!---! */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* !!!!!!!!!!!!!!!!!!!! + [ VARIABLES ] + !!!!!!!!!!!!!!!!!!!!---! */
+
+:root {
+    --card-color-bg: #1D1C19;
+    --card-color-primary: #f7dd43;
+    --card-color-title-border: #746615;
+    --background: url(./assets/bg-yellow.svg);
+}
+
+body.blue {
+    --card-color-bg: #202024;
+    --card-color-primary: #338AF3;
+    --card-color-title-border: #338AF3;
+    --background: url(./assets/bg-blue.svg);
+}
+
+body.green {
+    --card-color-bg: #1A1F1B;
+    --card-color-primary: #047C3F;
+    --card-color-title-border: #047C3F;
+    --background: url(./assets/bg-green.svg);
+}
+
+ul {
+    list-style: none;
+}
+
+/* !!!!!!!!!!!!!!!!!!!! + [ BODY ] + !!!!!!!!!!!!!!!!!!!! */
+
+body {
+    background: #121214 var(--background) no-repeat center;
+    background-size: cover;
+}
+
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* #################### [ APP ] #################### */
+
+#app {
+    width: fit-content;
+    margin: auto;
+    padding-top: 52px;
+}
+
+/* ========== [ header ] ========== */
+
+header {
+    margin-bottom: 63px;
+    text-align: center;
+}
+
+/* ========== [ card ] ========== */
+
+#cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.card {
+    padding: 32px 23px;
+    text-align: center;
+
+    background: var(--card-color-bg);
+    border-bottom: 2px solid var(--card-color-primary);
+    border-radius: 6px
+}
+
+/* +++ { data dos jogos } +++ */
+
+.card h2 {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 8px 16px;
+    border: 1px solid var(--card-color-title-border);
+    border-radius: 6px;
+
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 53px;
+
+    color: #f7dd43;
+}
+
+.card h2 span {
+    color: #E1E1E6;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* +++ { horários e jogos } +++ */
+
+.card ul {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card ul li + li {
+    padding-top: 24px;
+    border-top: 1px solid #323238;
+}
+
+.card ul li strong {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 125%;
+    color: #E1E1E6;
+}
+
+.card h2:hover,
+.card ul li strong:hover,
+.card ul li img:hover {
+    transform: scale(1.1);
+}
+
+.card h2,
+.card ul li strong,
+.card ul li img {
+    transition: transform 0.3s;
+}
+
+.card {
+    opacity: 0;
+    animation: appear 0.3s forwards;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 700px) {
+    #cards {
+        max-width: 670px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
