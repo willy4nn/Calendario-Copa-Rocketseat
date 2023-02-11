@@ -18,7 +18,7 @@
 ![print nlw](https://user-images.githubusercontent.com/101363317/200149747-f856e60f-e3e6-4dd8-9562-87b851db9d18.PNG)
 
 <h2> 📝 Resumo do projeto </h2>
-<p><b>Page:</b> https://willy4nn.github.io/Calendario-NLW_10_Copa/ </p>
+<p><b>GitHub Pages:</b> https://willy4nn.github.io/Calendario-Copa-Rocketseat/ </p>
 <p>Calendário pessoal para os jogos da copa, feito com HTML, CSS e JavaScript, feito durante o evento Next Level Week #10 Copa, promovido pela Rocketseat.</p>
 
 <h2> 🚀 Tecnologias utilizadas </h2>
